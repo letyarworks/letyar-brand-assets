@@ -1,30 +1,91 @@
 # Letyar Brand Assets
 
-This package was built from the **approved three-groove Letyar logomark geometry**. The SVG master is the single source of truth; do not redraw or alter its paths.
+Official brand identity and visual asset library for **Letyar Labs**.
 
-## Main files
+> **Every build carries a fingerprint.**
 
-- `svg/mark-master-8k.svg` — official 8K master SVG, black background
-- `raster/mark-8k.png` — official 8192 × 8192 PNG export
-- `svg/mark-transparent.svg` — transparent version for placement on approved backgrounds
-- `svg/mark-on-ink.svg` — standard Ink/black square asset
-- `svg/mark-on-cream.svg` — Cream background asset
-- `svg/mark-on-lacquer.svg` — Lacquer background asset
-- `svg/mark-on-gold.svg` — Gold background asset
-- `svg/mark-gold-accent.svg` — Ink background with Thanaka Gold dot
-- `svg/mark-monochrome-black.svg` / `mark-monochrome-white.svg` — one-color print/embossing use
+Letyar (လက်ရာ) represents craftsmanship, authorship, and the maker's fingerprint. This repository is the **source of truth for approved Letyar visual assets** used across Letyar Labs websites, products, applications, social profiles, documents, and partner materials.
 
-## Colours
+## Brand
 
-| Token | Value | Use |
+| Item | Official direction |
+| --- | --- |
+| Brand | **Letyar / Letyar Labs** |
+| Positioning | **Web · Software · Product** |
+| Primary domain | https://letyarlabs.com |
+| Developer / open-source home | https://letyar.dev |
+| Tagline | **Every build carries a fingerprint.** |
+| Alternate line | **Built by hand, shipped on time.** |
+
+## Repository structure
+
+```text
+letyar-brand-assets/
+├── README.md
+├── LICENSE
+├── docs/
+│   └── brand-guidelines.md
+├── svg/
+│   ├── mark-master-8k.svg
+│   ├── mark-transparent.svg
+│   ├── mark-light.svg
+│   ├── mark-gold-accent.svg
+│   ├── mark-on-ink.svg
+│   ├── mark-on-gold.svg
+│   ├── mark-on-cream.svg
+│   ├── mark-on-lacquer.svg
+│   ├── mark-monochrome-black.svg
+│   ├── mark-monochrome-white.svg
+│   └── icon-*.svg
+└── raster/
+    ├── mark-8k.png
+    ├── mark-transparent-2048.png
+    ├── mark-gold-accent-2048.png
+    ├── mark-on-cream-2048.png
+    ├── icon-*.png
+    └── favicon.ico
+```
+
+## Logo system
+
+The approved Letyar mark is based on the **three-groove geometry**.
+
+### Master
+
+- `svg/mark-master-8k.svg` — primary vector master.
+- `raster/mark-8k.png` — high-resolution raster export.
+- The SVG master is the source of truth.
+- Do not redraw, trace, or alter the geometry.
+
+### Approved variants
+
+| Variant | Intended use |
+| --- | --- |
+| `mark-transparent.svg` | General placement on approved backgrounds |
+| `mark-light.svg` | Light/negative treatment |
+| `mark-on-ink.svg` | Standard dark brand surface |
+| `mark-on-cream.svg` | Light editorial surface |
+| `mark-on-lacquer.svg` | Accent surface |
+| `mark-on-gold.svg` | Gold/premium surface |
+| `mark-gold-accent.svg` | Premium/global accent treatment |
+| `mark-monochrome-black.svg` | Single-colour print/embossing |
+| `mark-monochrome-white.svg` | Single-colour dark-surface use |
+
+## Colour tokens
+
+| Token | Hex | Role |
 | --- | --- | --- |
-| Ink | `#000000` | Standard dark background |
-| Groove | `#1A1714` | Core groove stroke on Ink |
-| Lacquer | `#E34B2E` | Standard accent dot |
-| Thanaka Gold | `#D9A441` | Premium/global accent dot only |
-| Cream | `#F5F0E6` | Light background |
+| Ink | `#000000` | Primary dark surface |
+| Groove | `#1A1714` | Core groove stroke |
+| Lacquer | `#E34B2E` | Standard accent |
+| Thanaka Gold | `#D9A441` | Premium/global accent |
+| Cream | `#F5F0E6` | Primary light surface |
 
-## Web use
+Use only approved colour combinations. Do not introduce gradients, arbitrary colours, shadows, or effects to the mark.
+
+## Digital implementation
+
+Prefer SVG for websites, apps, documentation, and other digital interfaces.
 
 ```html
 <link rel="icon" href="/brand/svg/icon-32.svg" type="image/svg+xml">
@@ -32,10 +93,69 @@ This package was built from the **approved three-groove Letyar logomark geometry
 <img src="/brand/svg/mark-transparent.svg" alt="Letyar">
 ```
 
-## Rules
+For favicon fallbacks and platforms that do not accept SVG, use the supplied PNG/ICO exports.
 
-- Use the normal Lacquer dot for everyday brand usage.
-- Use the Gold accent version only for premium/global, awards, keynotes, and special partnership contexts.
-- Never stretch, rotate, recolour outside this palette, add gradients/shadows, or redraw the mark.
-- Use SVG for digital and print whenever possible. PNG is supplied for platforms that do not accept SVG.
-- At tiny sizes, use `raster/favicon.ico` or `raster/icon-32.png`.
+## Clear-space and scaling
+
+- Keep sufficient empty space around the mark so it remains visually distinct.
+- Never stretch, compress, rotate, skew, or crop the mark.
+- Do not place text, UI controls, or decorative elements inside the mark's clear space.
+- Use the supplied icon assets at small sizes rather than shrinking the master mark excessively.
+
+Detailed usage guidance is maintained in [docs/brand-guidelines.md](docs/brand-guidelines.md).
+
+## Naming convention
+
+Asset names describe their intended role and treatment:
+
+- `mark-*` — primary Letyar mark
+- `icon-*` — application/favicon icon exports
+- `master` — source-of-truth artwork
+- `transparent` — transparent background
+- `on-ink`, `on-cream`, `on-gold`, `on-lacquer` — approved surface variants
+- `gold-accent` — Thanaka Gold accent treatment
+- `monochrome-*` — one-colour production variants
+
+Do not rename source assets casually; stable names make product and website integrations predictable.
+
+## Brand usage rules
+
+### Do
+
+- Use the supplied artwork without modifying its geometry.
+- Prefer SVG where supported.
+- Use the standard Lacquer accent for everyday brand communication.
+- Reserve the Gold accent treatment for premium/global, awards, keynote, and special partnership contexts.
+- Preserve the intended contrast between the mark and its background.
+
+### Do not
+
+- Stretch, rotate, mirror, or redraw the mark.
+- Change groove proportions or spacing.
+- Add gradients, bevels, shadows, glow, or decorative effects.
+- Apply unapproved colours.
+- Use the Gold accent as the default everyday treatment.
+- Export a low-quality screenshot when an approved asset is available.
+
+## Source of truth
+
+This repository is the canonical Letyar visual asset source for production work.
+
+When an asset is updated, update the repository first and then propagate the approved version to products, websites, social profiles, and documents.
+
+## Ownership
+
+Letyar and the associated visual identity are maintained by **Letyar Labs**.
+
+Brand assets are not automatically open-source merely because this repository is public. See [LICENSE](LICENSE) for permitted use.
+
+## Contact
+
+- Website: https://letyarlabs.com
+- Email: hello@letyarlabs.com
+- GitHub: https://github.com/letyarworks
+
+---
+
+**Letyar Labs**  
+*Every build carries a fingerprint.*
